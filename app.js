@@ -82,13 +82,13 @@ window.addEventListener("load", () => {
     const month = Math.floor(Math.random() * months.length);
     const randomImgIndex = Math.floor(Math.random * portraits.length);
     const chosenImg = portraits.splice(randomImgIndex, 1);
-    const future = Math.random > 0.5;
+    const future = Math.random() > 0.5;
     const currentYear = future
       ? Math.floor(Math.random() * (5000 - (year + 70) + (year + 70)))
       : Math.floor(Math.random() * (2090 + 1000 + 1) - 1000);
     const quoteIndex = future
-      ? Math.floor(Math.random * futureQuotes.length)
-      : Math.floor(Math.random * pastQuotes.length);
+      ? Math.floor(Math.random() * futureQuotes.length)
+      : Math.floor(Math.random() * pastQuotes.length);
     const chosenQuote = future
       ? futureQuotes.splice(quoteIndex, 1)
       : pastQuotes.splice(quoteIndex, 1);
@@ -101,6 +101,8 @@ window.addEventListener("load", () => {
     const imgElement = document.createElement("img");
     imgElement.classList.add("card-img");
     imgElement.src = chosenImg;
+    imgElement.setAttribute("width", "200px");
+    imgElement.style.borderRadius = "50%";
 
     const nameElement = document.createElement("p");
     nameElement.classList.add("name");

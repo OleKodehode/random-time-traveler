@@ -1,0 +1,17 @@
+.head-1 {
+  background: #780000;
+}
+
+.background {
+  background: #1d3557;
+  background: linear-gradient(
+    90deg,
+    rgba(29, 53, 87, 1) 0%,
+    rgba(168, 218, 220, 1) 100%
+  );
+  text-align: center;
+}
+
+.head-2 {
+  background: #780000;
+}

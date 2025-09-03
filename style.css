@@ -1,3 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  height: 90svh;
+  margin-top: 5svh;
+  background-color: hsl(0, 0%, 5%);
+  font-size: 1.1em;
+}
+
+.time-traveler-card {
+  background-color: hsl(290, 95%, 7.5%);
+  color: hsl(0, 100%, 100%);
+  border-radius: 25px;
+  padding: 3em;
+  display: grid;
+  gap: 2em;
+  grid-template-areas:
+    "img name"
+    "img dob"
+    "currentYear currentYear"
+    "quoteTitle quoteTitle"
+    "quote quote";
+  max-width: 33svw;
+  min-height: 70svh;
+}
+
+.card-img {
+  grid-area: img;
+  border: 2px white solid;
+  width: 125px;
+  place-self: center;
+}
+
+.name {
+  grid-area: name;
+  font-size: 1.25em;
+  margin-top: 1em;
+}
+
+.dob {
+  grid-area: dob;
+  font-style: italic;
+  margin-top: -2em;
+}
+
+.quote-title {
+  grid-area: quoteTitle;
+  color: hsl(0, 0%, 90%);
+}
+
+.quote {
+  grid-area: quote;
+  font-style: italic;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.current-year {
+  grid-area: currentYear;
+}
 .head-1 {
   background: #780000;
 }

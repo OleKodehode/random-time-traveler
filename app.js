@@ -120,7 +120,7 @@ window.addEventListener("load", () => {
 
     const quoteElement = document.createElement("p");
     quoteElement.classList.add("quote");
-    quoteElement.textContent = chosenQuote;
+    quoteElement.textContent = `"${chosenQuote}"`;
 
     const currentYearElement = document.createElement("p");
     currentYearElement.classList.add("current-year");

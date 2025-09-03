@@ -16,7 +16,23 @@ No presistency - New selection on every refresh
 import { pastQuotes, futureQuotes } from "./quotes.js";
 // need FS and path for getting the images from assets
 
-const portraits = ["./assets/face1.jpg", "./assets/face2.jpg"];
+const portraits = [
+  "./assets/face1.jpg",
+  "./assets/face2.jpg",
+  "./assets/face3.jpg",
+  "./assets/face4.jpg",
+  "./assets/face5.jpg",
+  "./assets/face6.jpg",
+  "./assets/face7.jpg",
+  "./assets/face8.jpg",
+  "./assets/face9.jpg",
+  "./assets/face10.jpg",
+  "./assets/face11.jpg",
+  "./assets/face12.jpg",
+  "./assets/face13.jpg",
+  "./assets/face14.jpg",
+  "./assets/face15.jpg",
+];
 const months = [
   "January",
   "February",
@@ -81,7 +97,7 @@ window.addEventListener("load", () => {
   while (cards < cardLimit) {
     const year = Math.floor(Math.random() * (3100 - 2100 + 1)) + 2100;
     const month = Math.floor(Math.random() * months.length);
-    const randomImgIndex = Math.floor(Math.random * portraits.length);
+    const randomImgIndex = Math.floor(Math.random() * portraits.length);
     const chosenImg = portraits.splice(randomImgIndex, 1);
     const future = Math.random() > 0.5;
     const currentYear = future
@@ -111,13 +127,13 @@ window.addEventListener("load", () => {
 
     const dobElement = document.createElement("p");
     dobElement.classList.add("dob");
-    dobElement.textContent = `${months[month]} - ${year}`;
+    dobElement.textContent = `Born: ${months[month]} ${year} AD`;
 
     const staticQuoteText = document.createElement("p");
     staticQuoteText.classList.add("quote-title");
-    staticQuoteText.textContent = `What does ${name} have to say about the ${
-      future ? "Future?" : "Past?"
-    }`;
+    staticQuoteText.textContent = `What's ${name}'s comment about the ${
+      future ? "Future" : "Past"
+    }?`;
 
     const quoteElement = document.createElement("p");
     quoteElement.classList.add("quote");

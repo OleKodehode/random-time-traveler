@@ -75,9 +75,10 @@ const names = [
 ];
 
 let cards = 0;
+const cardLimit = 2;
 
 window.addEventListener("load", () => {
-  while (cards < 2) {
+  while (cards < cardLimit) {
     const year = Math.floor(Math.random() * (3100 - 2100 + 1)) + 2100;
     const month = Math.floor(Math.random() * months.length);
     const randomImgIndex = Math.floor(Math.random * portraits.length);
